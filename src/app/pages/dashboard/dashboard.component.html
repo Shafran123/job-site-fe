@@ -1,0 +1,12 @@
+<div *ngIf="currentUser_Role == 1">
+    <app-user-dashboard></app-user-dashboard>
+</div>
+
+
+<div *ngIf="currentUser_Role == 2">
+    <app-company-dashboard></app-company-dashboard>
+</div>
+
+<div *ngIf="currentUser_Role == 3">
+    <app-superadmin-dashboard></app-superadmin-dashboard>
+</div>

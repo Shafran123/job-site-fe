@@ -1,0 +1,8 @@
+.input{
+    @apply text-sm pl-3 border-[1px] w-full h-[42px] border-gray-400/50 rounded-md
+}
+
+
+.error{
+    @apply border-2 border-red-400
+  }

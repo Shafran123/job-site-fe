@@ -1,0 +1,7 @@
+.btnFilled{
+    @apply h-[42px] w-[360px] flex justify-center items-center rounded-md bg-black text-white hover:shadow-md
+}
+
+.btnOutlined{
+    @apply h-[42px] w-[360px] flex justify-center items-center rounded-md border-2 border-black text-black hover:shadow-md
+}

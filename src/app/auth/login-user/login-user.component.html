@@ -1,0 +1,69 @@
+<div class=" h-screen flex flex-col justify-center items-center overflow-hidden">
+    <div class="w-[360px]">
+        <div class="w-full flex items-center justify-center overflow-hidden">
+            <!-- Column Content -->
+            <div class="flex justify-center flex-col items-center">
+                <div class="text-center text-7xl font-bold  text-[#2563EB]">
+                    Easy Jobs
+                </div>
+
+                <div class="pt-2">
+                    We make your career sucessfull!
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="mt-2 h-[20px]">
+
+        </div>
+
+        <div class="font-bold  ">
+            Login As User
+        </div>
+
+        <div class="mt-2 h-[20px]">
+
+        </div>
+
+        <form [formGroup]="loginUserForm">
+            <div class="w-[360px] pb-4">
+                <input formControlName='email' placeholder="email" 
+                [ngClass]="isLoginClicked && loginUserForm.controls['email'].errors ? 'error' :'' "
+                type="text" class="input">
+            </div>
+    
+            <div class="w-[360px] pb-4">
+                <input formControlName='password' placeholder="password" type="password" 
+                [ngClass]="isLoginClicked && loginUserForm.controls['password'].errors ? 'error' :'' "
+                class="input">
+            </div>
+    
+        </form>
+
+        <div *ngIf="isLoginClicked && loginUserForm.status == 'INVALID'">
+            Please fill information above
+        </div>
+    
+        <div class="text-red-500 ">
+            {{err}}
+        </div>
+
+        <div class="mt-6">
+
+        </div>
+
+        <button button_text="Login" type='filled' (onClickButtonHandler)="onClickLogin()"></button>
+
+        <div class="mt-6">
+
+        </div>
+
+        <button button_text="Register" (onClickButtonHandler)="onClickRegister()" type='outlined'></button>
+
+
+    </div>
+
+
+</div>
